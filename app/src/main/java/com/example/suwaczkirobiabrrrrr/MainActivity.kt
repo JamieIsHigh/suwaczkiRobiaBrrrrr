@@ -36,6 +36,13 @@ class MainActivity : AppCompatActivity() {
             im2.scaleY = 1.toFloat()
             im3.scaleX = 1.toFloat()
             im3.scaleY = 1.toFloat()
+
+            s1X.progress = 100
+            s1Y.progress = 100
+            s2X.progress = 100
+            s2Y.progress = 100
+            s3X.progress = 100
+            s3Y.progress = 100
         }
         s1X?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged( seekBar: SeekBar, progress: Int, fromUser: Boolean) {
