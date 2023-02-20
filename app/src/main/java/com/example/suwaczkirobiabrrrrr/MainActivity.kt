@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
         s2Y.progress = 100
         s3X.progress = 100
         s3Y.progress = 100
+        pb1.progress = 100
+        pb2.progress = 100
 
         bt.setOnClickListener {
             im1.scaleX = 1.toFloat()
@@ -46,6 +48,8 @@ class MainActivity : AppCompatActivity() {
             s2Y.progress = 100
             s3X.progress = 100
             s3Y.progress = 100
+            pb1.progress = 100
+            pb2.progress = 100
         }
         s1X?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged( seekBar: SeekBar, progress: Int, fromUser: Boolean) {
