@@ -46,5 +46,50 @@ class MainActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(seekBar: SeekBar) {
             }
         })
+        s1Y?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged( seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                im1.scaleY = progress.toFloat() / 100;
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar) {
+            }
+            override fun onStopTrackingTouch(seekBar: SeekBar) {
+            }
+        })
+        s2X?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged( seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                im2.scaleX = progress.toFloat() / 100;
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar) {
+            }
+            override fun onStopTrackingTouch(seekBar: SeekBar) {
+            }
+        })
+        s2Y?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged( seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                im2.scaleY = progress.toFloat() / 100;
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar) {
+            }
+            override fun onStopTrackingTouch(seekBar: SeekBar) {
+            }
+        })
+        s3X?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged( seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                im3.scaleX = progress.toFloat() / 100;
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar) {
+            }
+            override fun onStopTrackingTouch(seekBar: SeekBar) {
+            }
+        })
+        s3Y?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged( seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                im3.scaleY = progress.toFloat() / 100;
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar) {
+            }
+            override fun onStopTrackingTouch(seekBar: SeekBar) {
+            }
+        })
     }
 }
