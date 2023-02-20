@@ -58,7 +58,8 @@ class MainActivity : AppCompatActivity() {
             allProgressX = (s1X.progress + s2X.progress + s3X.progress)/3
             allProgressY = (s1Y.progress + s2Y.progress + s3Y.progress)/3
 
-
+            pb1.progress = allProgressX
+            pb2.progress = allProgressY
         }
         s1X?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged( seekBar: SeekBar, progress: Int, fromUser: Boolean) {
