@@ -22,6 +22,13 @@ class MainActivity : AppCompatActivity() {
         val s3X = findViewById<SeekBar>(R.id.seekBar4)
         val s3Y = findViewById<SeekBar>(R.id.seekBar8)
 
+        s1X.progress = 100
+        s1Y.progress = 100
+        s2X.progress = 100
+        s2Y.progress = 100
+        s3X.progress = 100
+        s3Y.progress = 100
+
         bt.setOnClickListener {
             im1.scaleX = 1.toFloat()
             im1.scaleY = 1.toFloat()
@@ -30,5 +37,14 @@ class MainActivity : AppCompatActivity() {
             im3.scaleX = 1.toFloat()
             im3.scaleY = 1.toFloat()
         }
+        s1X?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged( seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                im1.scaleX = progress.toFloat() / 100;
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar) {
+            }
+            override fun onStopTrackingTouch(seekBar: SeekBar) {
+            }
+        })
     }
 }
