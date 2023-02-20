@@ -25,6 +25,9 @@ class MainActivity : AppCompatActivity() {
         val pb1 = findViewById<ProgressBar>(R.id.progressBar)
         val pb2 = findViewById<ProgressBar>(R.id.progressBar2)
 
+        var allProgressX = 300
+        var allProgressY = 300
+
         s1X.progress = 100
         s1Y.progress = 100
         s2X.progress = 100
@@ -51,9 +54,16 @@ class MainActivity : AppCompatActivity() {
             pb1.progress = 100
             pb2.progress = 100
         }
+        fun progressOnChange() {
+            allProgressX = (s1X.progress + s2X.progress + s3X.progress)/3
+            allProgressY = (s1Y.progress + s2Y.progress + s3Y.progress)/3
+
+
+        }
         s1X?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged( seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-                im1.scaleX = progress.toFloat() / 100;
+                im1.scaleX = progress.toFloat() / 100
+                progressOnChange()
             }
             override fun onStartTrackingTouch(seekBar: SeekBar) {
             }
@@ -62,7 +72,8 @@ class MainActivity : AppCompatActivity() {
         })
         s1Y?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged( seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-                im1.scaleY = progress.toFloat() / 100;
+                im1.scaleY = progress.toFloat() / 100
+                progressOnChange()
             }
             override fun onStartTrackingTouch(seekBar: SeekBar) {
             }
@@ -71,7 +82,8 @@ class MainActivity : AppCompatActivity() {
         })
         s2X?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged( seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-                im2.scaleX = progress.toFloat() / 100;
+                im2.scaleX = progress.toFloat() / 100
+                progressOnChange()
             }
             override fun onStartTrackingTouch(seekBar: SeekBar) {
             }
@@ -80,7 +92,8 @@ class MainActivity : AppCompatActivity() {
         })
         s2Y?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged( seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-                im2.scaleY = progress.toFloat() / 100;
+                im2.scaleY = progress.toFloat() / 100
+                progressOnChange()
             }
             override fun onStartTrackingTouch(seekBar: SeekBar) {
             }
@@ -89,7 +102,8 @@ class MainActivity : AppCompatActivity() {
         })
         s3X?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged( seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-                im3.scaleX = progress.toFloat() / 100;
+                im3.scaleX = progress.toFloat() / 100
+                progressOnChange()
             }
             override fun onStartTrackingTouch(seekBar: SeekBar) {
             }
@@ -98,7 +112,8 @@ class MainActivity : AppCompatActivity() {
         })
         s3Y?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged( seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-                im3.scaleY = progress.toFloat() / 100;
+                im3.scaleY = progress.toFloat() / 100
+                progressOnChange()
             }
             override fun onStartTrackingTouch(seekBar: SeekBar) {
             }
