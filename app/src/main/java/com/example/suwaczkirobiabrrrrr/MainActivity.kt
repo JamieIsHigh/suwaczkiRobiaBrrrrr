@@ -25,9 +25,6 @@ class MainActivity : AppCompatActivity() {
         val pb1 = findViewById<ProgressBar>(R.id.progressBar)
         val pb2 = findViewById<ProgressBar>(R.id.progressBar2)
 
-        var allProgressX = 300
-        var allProgressY = 300
-
         s1X.progress = 100
         s1Y.progress = 100
         s2X.progress = 100
@@ -55,11 +52,8 @@ class MainActivity : AppCompatActivity() {
             pb2.progress = 100
         }
         fun progressOnChange() {
-            allProgressX = (s1X.progress + s2X.progress + s3X.progress)/3
-            allProgressY = (s1Y.progress + s2Y.progress + s3Y.progress)/3
-
-            pb1.progress = allProgressX
-            pb2.progress = allProgressY
+            pb1.progress = (s1X.progress + s2X.progress + s3X.progress)/3
+            pb2.progress = (s1Y.progress + s2Y.progress + s3Y.progress)/3
         }
         s1X?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged( seekBar: SeekBar, progress: Int, fromUser: Boolean) {
