@@ -3,8 +3,8 @@ package com.example.suwaczkirobiabrrrrr
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.SeekBar
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +15,12 @@ class MainActivity : AppCompatActivity() {
         val im1 = findViewById<ImageView>(R.id.imageView)
         val im2 = findViewById<ImageView>(R.id.imageView2)
         val im3 = findViewById<ImageView>(R.id.imageView3)
+        val s1X = findViewById<SeekBar>(R.id.seekBar)
+        val s1Y = findViewById<SeekBar>(R.id.seekBar6)
+        val s2X = findViewById<SeekBar>(R.id.seekBar3)
+        val s2Y = findViewById<SeekBar>(R.id.seekBar7)
+        val s3X = findViewById<SeekBar>(R.id.seekBar4)
+        val s3Y = findViewById<SeekBar>(R.id.seekBar8)
 
         bt.setOnClickListener {
             im1.scaleX = 1.toFloat()
