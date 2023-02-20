@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.SeekBar
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         val s2Y = findViewById<SeekBar>(R.id.seekBar7)
         val s3X = findViewById<SeekBar>(R.id.seekBar4)
         val s3Y = findViewById<SeekBar>(R.id.seekBar8)
+        val pb1 = findViewById<ProgressBar>(R.id.progressBar)
+        val pb2 = findViewById<ProgressBar>(R.id.progressBar2)
 
         s1X.progress = 100
         s1Y.progress = 100
